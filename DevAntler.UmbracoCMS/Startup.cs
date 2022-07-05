@@ -37,6 +37,7 @@ public class Startup
             .AddComposers()
             .Build();
 
+        services.AddServerSideBlazor();
     }
 
     /// <summary>
@@ -63,5 +64,7 @@ public class Startup
                 u.UseBackOfficeEndpoints();
                 u.UseWebsiteEndpoints();
             });
+
+        app.UseEndpoints(endpoints => endpoints.MapBlazorHub());
     }
 }
