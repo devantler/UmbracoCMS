@@ -3,4 +3,4 @@
 	Layout = "Master.cshtml";
 }
 
-@(await Html.RenderComponentAsync<Header>(RenderMode.ServerPrerendered, new{@Model.Title}))
+<component type="typeof(Header)" render-Mode="ServerPrerendered" param-Title="@Model.Title" />
