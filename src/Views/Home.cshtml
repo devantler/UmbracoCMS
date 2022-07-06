@@ -3,4 +3,4 @@
 	Layout = "Master.cshtml";
 }
 
-@(await Html.RenderComponentAsync<TestComponent>(RenderMode.ServerPrerendered, new {Home = @Model}))
+@(await Html.RenderComponentAsync<TestComponent>(RenderMode.ServerPrerendered, @Model))
